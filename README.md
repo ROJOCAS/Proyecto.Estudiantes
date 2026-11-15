@@ -27,3 +27,16 @@ git remote add origin https://github.com/USUARIO/GestionEstudiantes-Unidad3.git
 git push -u origin main
 ```
 Sustituye `USUARIO` y la URL por los datos reales. No publiques contraseñas ni tokens.
+
+## Mejoras de la Unidad 3
+
+Se implementó herencia en el proyecto GestionEstudiantes.
+
+Clases derivadas:
+- EstudiantePresencial
+- EstudianteEnLinea
+
+Se reutilizaron los métodos de la clase base mediante super()
+y se sobrescribió mostrarInformacion() utilizando @Override.
+
+Autor: Omar Padilla.
