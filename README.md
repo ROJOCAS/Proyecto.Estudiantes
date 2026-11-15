@@ -1,31 +1,29 @@
-## Requisitos
+# GestionEstudiantes – Unidad 3: Herencia en Java
 
-- Java JDK 26 o superior
-- Visual Studio Code o cualquier IDE compatible con Java
-- Git (opcional, para clonar el proyecto)
-  ## Cómo ejecutar
+Extensión de la aplicación de la Unidad 2. `Estudiante` es la clase base; `EstudiantePresencial` y `EstudianteEnLinea` son clases derivadas.
 
-1. Descargar o clonar el repositorio.
-2. Abrir la carpeta `GestionEstudiantes`.
-3. Compilar los archivos Java.
-4. Ejecutar la clase `Main`.
+## Compilar y ejecutar
+Desde la carpeta raíz:
+```bash
+javac -encoding UTF-8 -d out src/*.java
+java -cp out Main
+```
 
- ## Ejemplo de resultado
+## Conceptos aplicados
+- Herencia con `extends`.
+- Reutilización del constructor mediante `super(...)`.
+- Reutilización de `calcularPromedio()` y `estaAprobado()`.
+- Sobrescritura de `mostrarInformacion()` con `@Override`.
+- Métodos exclusivos de cada subclase.
 
-El programa muestra los datos de cada estudiante, sus tres calificaciones,
-el promedio y si está aprobado o reprobado.
-
-Ejemplo:
-
-Nombre: Carlos Martínez
-Edad: 20
-Matrícula: A001
-Promedio: 84.33
-Estado: APROBADO
-
-## Autor
-
-Omar Padilla
-
-Proyecto académico desarrollado para practicar los conceptos básicos
-de programación orientada a objetos en Java.
+## Publicar en GitHub
+Crear un repositorio vacío llamado `GestionEstudiantes-Unidad3` y ejecutar:
+```bash
+git init
+git add .
+git commit -m "Extiende GestionEstudiantes con herencia"
+git branch -M main
+git remote add origin https://github.com/USUARIO/GestionEstudiantes-Unidad3.git
+git push -u origin main
+```
+Sustituye `USUARIO` y la URL por los datos reales. No publiques contraseñas ni tokens.

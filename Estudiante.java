@@ -1,34 +1,25 @@
-/**
- * Clase que representa a un Estudiante.
- * Aplica los conceptos de encapsulamiento y definición de atributos.
- */
 public class Estudiante {
+    private String nombre;
+    private int edad;
+    private String matricula;
+    private double calificacion1, calificacion2, calificacion3;
 
-    // Atributos privados de la clase
-    private final String nombre;
-    private final String matricula;
-    private final String carrera;
-    private final double promedio; 
-
-    /**
-     * Constructor para inicializar los atributos del estudiante al momento de crearlo.
-     */
-    public Estudiante(String nombre, String matricula, String carrera, double promedio) {
-        this.nombre = nombre;
-        this.matricula = matricula;
-        this.carrera = carrera;
-        this.promedio = promedio;
+    public Estudiante(String nombre, int edad, String matricula,
+                      double calificacion1, double calificacion2, double calificacion3) {
+        this.nombre=nombre; this.edad=edad; this.matricula=matricula;
+        this.calificacion1=calificacion1; this.calificacion2=calificacion2; this.calificacion3=calificacion3;
     }
+    public double calcularPromedio() {
+        return (calificacion1+calificacion2+calificacion3)/3.0;
+    }
+    public boolean estaAprobado() { return calcularPromedio()>=70; }
 
-    /**
-     * Método para mostrar los datos del estudiante en la consola.
-     */
-    public void mostrarDatos() {
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Matricula: " + matricula);
-        System.out.println("Carrera: " + carrera);
-        System.out.println("Promedio: " + promedio);
-        System.out.println("---------------------------");
+    /** Método común que las clases derivadas pueden sobrescribir. */
+    public void mostrarInformacion() {
+        System.out.println("Nombre: "+nombre);
+        System.out.println("Edad: "+edad);
+        System.out.println("Matrícula: "+matricula);
+        System.out.printf("Promedio: %.2f%n",calcularPromedio());
+        System.out.println("Estado: "+(estaAprobado()?"APROBADO":"REPROBADO"));
     }
 }
-
